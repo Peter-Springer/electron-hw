@@ -44,12 +44,6 @@ const storeLink = ({ title, url }) => {
   return { title, url };
 };
 
-window.addEventListener('load', () => {
-  for (let title of Object.keys(localStorage)) {
-    addToPage({ title, url: localStorage.getItem(title) });
-  }
-});
-
 clearStorageButton.addEventListener('click', () => {
   localStorage.clear();
   linksSection.innerHTML = '';
